@@ -1,0 +1,19 @@
+patchcore
+
+
+创建模型并且生成图片
+PYTHONPATH=src python bin/run_patchcore.py --gpu 0 --seed 0 --save_patchcore_model --save_segmentation_images \
+  --log_group metal_nut_test2 \
+  /home/ubuntu/cummins_project/patchcore-inspection/pc_results \
+  patch_core -b wideresnet50 -le layer2 -le layer3 --faiss_on_gpu \
+  --pretrain_embed_dimension 1024 --target_embed_dimension 1024 \
+  --anomaly_scorer_num_nn 1 --patchsize 3 \
+  sampler -p 0.1 approx_greedy_coreset \
+  dataset --resize 256 --imagesize 224 -d metal_nut mvtec "/home/ubuntu/cummins_project/patchcore-inspection/mvtec"
+
+PYTHONPATH=src python bin/load_and_evaluate_patchcore.py --gpu 0 --seed 0 --save_segmentation_images \
+"/home/ubuntu/cummins_project/patchcore-inspection/pc_results/project/IM224_WR50_L2-3_P01_D1024-1024_PS-3_AN-1_S0/result" \
+patch_core_loader -p "/home/ubuntu/cummins_project/patchcore-inspection/models/IM224_WR50_L2-3_P01_D1024-1024_PS-3_AN-1/models/mvtec_hazelnut" \
+dataset --resize 256 --imagesize 224 -d "metal_nut" mvtec "/home/ubuntu/cummins_project/patchcore-inspection/mvtec"
+
+

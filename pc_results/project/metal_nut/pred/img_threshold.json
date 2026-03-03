@@ -1,0 +1,11 @@
+{
+  "method": "quantile",
+  "num_normals": 220,
+  "model_dir": "/home/ubuntu/cummins_project/patchcore-inspection/pc_results/project/metal_nut/models/mvtec_metal_nut",
+  "resize": 366,
+  "imagesize": 320,
+  "use_cuda": true,
+  "mean_img": 3.0524512681094085,
+  "std_img": 0.17357133957551035,
+  "saved_at": "2025-10-04 23:43:47"
+}
