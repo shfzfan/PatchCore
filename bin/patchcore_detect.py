@@ -22,14 +22,14 @@ FAISS_ON_GPU = False        # set True to use FAISS GPU (if your environment sup
 FAISS_WORKERS = 8
 
 # ====== Main knobs you will change ======
-MODEL_DIR    = "/home/ubuntu/cummins_project/patchcore-inspection/pc_results/project/metal_nut/models/mvtec_metal_nut"
-INPUT_PATH   = "/home/ubuntu/cummins_project/patchcore-inspection/mvtec/metal_nut/test/good"
-OUT_DIR      = "/home/ubuntu/cummins_project/patchcore-inspection/pc_results/project/metal_nut/pred"
+MODEL_DIR    = "/home/ubuntu/cummins_project/patchcore-inspection/pc_results/project/vanes_test/models/mvtec_vanes"
+INPUT_PATH   = "/home/ubuntu/cummins_project/patchcore-inspection/mvtec/vanes/test/bent"
+OUT_DIR      = "/home/ubuntu/cummins_project/patchcore-inspection/pc_results/project/vanes_test/pred"
 IMG_THR_JSON = os.path.join(OUT_DIR, "img_threshold.json")
 
 RESIZE, IMAGESIZE = 366, 320
 OVERLAY_ALPHA = 0.20
-Z_THRESHOLD = 4.0
+Z_THRESHOLD = 1.0
 
 # Overlay text (smaller font)
 FONT_SCALE = 0.55

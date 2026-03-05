@@ -20,13 +20,13 @@ if SRC_DIR not in sys.path:
 
 # ========= 1) 配置（按需修改） =========
 # 模型目录：必须含 patchcore_params.pkl 和 nnscorer_search_index.faiss
-MODEL_DIR = "/home/ubuntu/cummins_project/patchcore-inspection/pc_results/project/metal_nut/models/mvtec_metal_nut"
+MODEL_DIR = "/home/ubuntu/cummins_project/patchcore-inspection/pc_results/project/vanes_test/models/mvtec_vanes"
 
 # 正常图文件夹（用于标定）
-NORMAL_DIR_FOR_CALIB = "/home/ubuntu/cummins_project/patchcore-inspection/mvtec/metal_nut/train/good"
+NORMAL_DIR_FOR_CALIB = "/home/ubuntu/cummins_project/patchcore-inspection/mvtec/vanes/train/good"
 
 # 输出目录（会把阈值 JSON 保存到这里）
-OUT_DIR = "/home/ubuntu/cummins_project/patchcore-inspection/pc_results/project/metal_nut/pred"
+OUT_DIR = "/home/ubuntu/cummins_project/patchcore-inspection/pc_results/project/vanes_test/pred"
 IMG_THR_JSON = os.path.join(OUT_DIR, "img_threshold.json")
 
 # 预处理尺寸（务必与训练/推理一致）
@@ -39,7 +39,7 @@ NUM_WORKERS = 0
 # 设备/FAISS
 USE_CUDA = torch.cuda.is_available()
 DEVICE = torch.device("cuda:0" if USE_CUDA else "cpu")
-FAISS_ON_GPU, FAISS_WORKERS = USE_CUDA, 8
+FAISS_ON_GPU, FAISS_WORKERS = False, 8
 
 # ========= 2) 依赖（库层不改） =========
 from patchcore import patchcore, common

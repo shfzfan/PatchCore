@@ -1,0 +1,11 @@
+{
+  "method": "quantile",
+  "num_normals": 78,
+  "model_dir": "/home/ubuntu/cummins_project/patchcore-inspection/pc_results/project/vanes_test/models/mvtec_vanes",
+  "resize": 366,
+  "imagesize": 320,
+  "use_cuda": true,
+  "mean_img": 4.425031393002241,
+  "std_img": 1.4186992939183793,
+  "saved_at": "2026-03-04 02:09:03"
+}
