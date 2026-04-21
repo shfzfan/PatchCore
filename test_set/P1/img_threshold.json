@@ -1,0 +1,11 @@
+{
+  "method": "quantile",
+  "num_normals": 189,
+  "model_dir": "/home/ubuntu/cummins_project/patchcore-inspection/pc_results/project/P1/models/mvtec_P1",
+  "resize": 366,
+  "imagesize": 320,
+  "use_cuda": true,
+  "mean_img": 3.438819784335989,
+  "std_img": 0.1795742134693,
+  "saved_at": "2026-04-11 04:57:27"
+}
